@@ -1,0 +1,24 @@
+<!-- templates/dashboard.html -->
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+ <!-- Gender distribution chart -->
+ <div class="container bg-light shadow-md p-5 form-layout text-center">
+    <h2>Gender Distribution</h2>
+    <img src="data:image/png;base64,{{ image_base64 }}" alt="Gender Distribution Chart">
+</div>
+
+<!-- List of uploaded files with links to view data -->
+<div class="container bg-light shadow-md p-5 form-layout">
+    <h2>Uploaded Files</h2>
+    <ul>
+        {% for file in uploaded_files %}
+            <li>
+                <a href="{% url 'view_data' file_id=file.file_id %}">View data for file with ID {{ file.file_id }}</a>
+                (Uploaded on: {{ file.upload_date }})  <!-- Assuming you have an upload_date field -->
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

@@ -1,0 +1,58 @@
+<!-- templates/upload.html -->
+ {% extends 'base.html' %}
+ {% load static %}
+ {% block content %}
+<br>
+&nbsp;
+<br>
+<br>
+&nbsp;
+<br>
+<br>
+&nbsp;
+<br>
+<br>
+&nbsp;
+<br>
+ <div class="container bg-light shadow-lg p-5 form-layout">
+    <h1>Upload Excel File</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Upload</button>
+    </form>
+    {% if messages %}
+        <div class="messages">
+            {% for message in messages %}
+                <div class="message {{ message.tags }}">{{ message }}</div>
+            {% endfor %}
+        </div>
+    {% endif %}
+</div>
+{% endblock %}
+<!-- <!DOCTYPE html>
+<html lang="en">  
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Excel File</title>
+    <link rel="stylesheet" href="/valix/templates/style.css">"{% static 'css/style.css' %}"
+</head>
+<body>
+    <div class="container">
+        <h1>Upload Excel File</h1>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn">Upload</button>
+        </form>
+        {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+                    <div class="message {{ message.tags }}">{{ message }}</div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html> -->
