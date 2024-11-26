@@ -33,7 +33,7 @@ Clone the repository to your local machine:
 git clone https://github.com/your-username/ValidXcel.git  
 cd ValidXcel  
 ```
-2. Set Up a Virtual Environment
+### 2. Set Up a Virtual Environment
 Create and activate a virtual environment:
 ```bash
 Copy code
@@ -41,32 +41,32 @@ python -m venv venv
 source venv/bin/activate    # For macOS/Linux  
 venv\Scripts\activate       # For Windows
 ```
-3. Install Dependencies
+### 3. Install Dependencies
 Install the required Python packages:
 ```
 bash
 pip install -r requirements.txt
 ```
-4. Apply Migrations
+### 4. Apply Migrations
 Set up the database by running migrations:
 ```
 bash
 python manage.py makemigrations  
 python manage.py migrate
 ```
-5. Create a Superuser
+### 5. Create a Superuser
 Create an admin user to manage the application:
 ```
 bash
 python manage.py createsuperuser
 ```
-6. Run the Development Server
+### 6. Run the Development Server
 Start the local development server:
 ```
 bash
 python manage.py runserver
 ```
-7. Access the Application
+### 7. Access the Application
 Application: http://127.0.0.1:8000
 Admin Panel: http://127.0.0.1:8000/admin
 Application Functionality
@@ -92,7 +92,7 @@ Displays data uploaded for each file, showing details like upload date and the n
 Provides graphical representations of user demographics based on:
 - Age distribution.
 - Gender ratios.
-## Additional Notes
+### Additional Notes
 - i) Static Files
 Ensure the STATIC_ROOT is configured properly when deploying the app to serve static files.
 
