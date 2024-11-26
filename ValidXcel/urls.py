@@ -8,6 +8,7 @@ from valix.views import upload_file_view, view_data, dashboard_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', dashboard_view, name='home'),
     path('upload/', upload_file_view, name='upload_file'),
     path('view/<uuid:file_id>/', view_data, name='view_data'),
     path('dashboard/', dashboard_view, name='dashboard')
