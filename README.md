@@ -70,10 +70,10 @@ python manage.py runserver
 Application: http://127.0.0.1:8000
 Admin Panel: http://127.0.0.1:8000/admin
 Application Functionality
-i) File Upload Page
+- i) File Upload Page
 Allows users to upload .xlsx files. Validates the file structure and content before processing.
 
-ii) Validation and Error Reporting
+- ii) Validation and Error Reporting
 Ensures the file contains five specific columns:
 Sno, FirstName, LastName, Gender, DateofBirth.
 Checks data for:
@@ -82,20 +82,19 @@ Unique Sno entries.
 Proper date format (YYYY-MM-DD).
 Gender restricted to M, F, or O.
 Provides feedback on any validation errors, including the specific rows and columns causing issues.
-iii) Data Management
+- iii) Data Management
 Inserts valid data into the database.
 Links data to the corresponding uploaded file for easy reference.
-iv) View Data
+- iv) View Data
 Displays data uploaded for each file, showing details like upload date and the number of valid rows.
 
-v) Dashboard Page
+- v) Dashboard Page
 Provides graphical representations of user demographics based on:
-
-Age distribution.
-Gender ratios.
-Additional Notes
-i) Static Files
+- Age distribution.
+- Gender ratios.
+## Additional Notes
+- i) Static Files
 Ensure the STATIC_ROOT is configured properly when deploying the app to serve static files.
 
-ii) Media Files
+- ii) Media Files
 Uploaded files are stored in the MEDIA_ROOT directory. Make sure to configure media handling in the deployment environment.
